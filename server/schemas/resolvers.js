@@ -58,6 +58,7 @@ const resolvers = {
       const order = new Order({ products: args.products });
       console.log(order);
       const line_items = [];
+
       const { products } = await order.populate('products');
       console.log(products);
 
